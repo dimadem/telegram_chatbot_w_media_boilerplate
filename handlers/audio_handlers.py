@@ -22,5 +22,5 @@ async def audio_reply(update: Update, context):
     await update.message.reply_text(reply)
     
     print("user:", audio_file.file_path)
-    print("transcription:", text)
+    print("transcription:", transcription)
     print("assistant:", reply)
