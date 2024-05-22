@@ -1,6 +1,6 @@
 # Предисловие
 
-Туториал поможет развернуть чат-бота Telegram, использующего API OpenAI, как локально, так и в Docker контейнере на облачном сервере.
+Туториал telegram_chatbot_w_media_boilerplate представляет собой шаблон для создания телеграмм-ботов с поддержкой обработки медиафайлов.
 
 Библиотеки:
 
@@ -11,7 +11,7 @@
 ## Структура проекта
 
 ```
-telegram_chatbot_boilerplate/
+telegram_chatbot_w_media_boilerplate/
 │
 ├── config/
 │   ├─── openai_client.py
@@ -20,8 +20,12 @@ telegram_chatbot_boilerplate/
 │
 ├── handlers/
 │   ├── __init__.py
+│   ├── audio_handlers.py
 │   ├── command_handlers.py
-│   └── message_handlers.py
+│   ├── image_file_handlers.py
+│   ├── message_handlers.py
+│   ├── video_file_handlers.py
+│   └── video_note_handlers.py
 │
 ├── utils/
 │   ├── __init__.py
@@ -34,7 +38,7 @@ telegram_chatbot_boilerplate/
 ```
 
 - `config/` - конфигурационные файлы
-- `handlers/` - обработчики сообщений и команд
+- `handlers/` - обработчики сообщений, файлов, аудио и команд
 - `utils/` - вспомогательные функции
 - `app.py` - главный файл приложения
 - `Dockerfile` - скрипт для создания Docker образа
